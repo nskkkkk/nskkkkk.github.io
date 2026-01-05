@@ -2,44 +2,237 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Naga Sai Krishna Kesani | ML Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naga Sai Krishna Kesani | ML Engineer</title>
   <style>
+    :root {
+      --bg: #0b0f17;
+      --card: #121a27;
+      --text: #e7eefc;
+      --muted: #a9b6d3;
+      --link: #6ea8ff;
+      --border: rgba(255,255,255,0.08);
+    }
+    * { box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: auto;
-      padding: 40px;
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 20% 0%, #152238 0%, var(--bg) 55%);
+      color: var(--text);
       line-height: 1.6;
     }
-    h1 { font-size: 2.5rem; }
-    h2 { margin-top: 2rem; }
-    a { color: #0366d6; text-decoration: none; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 980px; margin: 0 auto; padding: 28px 18px 64px; }
+    .nav {
+      display: flex; gap: 16px; justify-content: space-between; align-items: center;
+      padding: 12px 0 18px; border-bottom: 1px solid var(--border);
+    }
+    .nav .left { display: flex; gap: 14px; align-items: baseline; }
+    .brand { font-weight: 700; letter-spacing: 0.2px; }
+    .tag { color: var(--muted); font-size: 0.95rem; }
+    .nav .right { display: flex; gap: 14px; flex-wrap: wrap; justify-content: flex-end; }
+    .pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 12px; border: 1px solid var(--border); border-radius: 999px;
+      background: rgba(255,255,255,0.03);
+      font-size: 0.95rem;
+    }
+    .hero { padding: 28px 0 8px; }
+    h1 { margin: 0 0 10px; font-size: clamp(2rem, 3vw, 2.6rem); }
+    .subtitle { margin: 0 0 16px; color: var(--muted); font-size: 1.05rem; }
+    .cta { display: flex; gap: 12px; flex-wrap: wrap; margin: 18px 0 6px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 10px 14px; border-radius: 12px; border: 1px solid var(--border);
+      background: rgba(255,255,255,0.05);
+      font-weight: 600;
+    }
+    .btn.primary { background: rgba(110,168,255,0.16); border-color: rgba(110,168,255,0.35); }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 14px; margin-top: 18px; }
+    .card {
+      grid-column: span 6;
+      background: rgba(18,26,39,0.9);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+    .card h3 { margin: 0 0 8px; font-size: 1.1rem; }
+    .card p { margin: 0 0 12px; color: var(--muted); }
+    .meta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+    .chip {
+      font-size: 0.85rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.03);
+      color: var(--muted);
+    }
+    section { margin-top: 28px; }
+    h2 { margin: 0 0 12px; font-size: 1.25rem; }
+    .two-col { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 14px; }
+    .box {
+      background: rgba(18,26,39,0.7);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+    }
+    ul { margin: 10px 0 0; padding-left: 18px; color: var(--muted); }
+    .footer { margin-top: 42px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.95rem; }
+    @media (max-width: 860px) {
+      .card { grid-column: span 12; }
+      .two-col { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
+  <div class="container">
+    <div class="nav">
+      <div class="left">
+        <div class="brand">Naga Sai Krishna Kesani</div>
+        <div class="tag">ML Engineer · Data Scientist</div>
+      </div>
+      <div class="right">
+        <a class="pill" href="#projects">Projects</a>
+        <a class="pill" href="#skills">Skills</a>
+        <a class="pill" href="#contact">Contact</a>
+      </div>
+    </div>
 
-<h1>Naga Sai Krishna Kesani</h1>
-<p><b>Machine Learning Engineer | Data Scientist</b></p>
+    <div class="hero">
+      <h1>Building practical ML systems: NLP, LLMs, MLOps, and CV.</h1>
+      <p class="subtitle">
+        MS Data Science @ RIT · Experience across finance, marketing, and operations ·
+        Focused on shipping end-to-end ML projects with clean engineering and measurable impact.
+      </p>
 
-<p>
-MS Data Science @ RIT · NLP · LLMs · MLOps · Computer Vision
-</p>
+      <div class="cta">
+        <!-- Add resume.pdf to this repo (same folder as index.html) -->
+        <a class="btn primary" href="resume.pdf">Download Resume</a>
+        <a class="btn" href="https://github.com/nskkkkk" target="_blank" rel="noreferrer">GitHub</a>
+        <!-- Replace with your actual LinkedIn URL -->
+        <a class="btn" href="https://www.linkedinnagasai12.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </div>
 
-<h2>Featured Projects</h2>
-<ul>
-  <li><b>NLP Note Quality Metric</b> – Explainable NLP scoring system</li>
-  <li><b>End-to-End ML Risk Pipeline</b> – Production ML workflow</li>
-  <li><b>LLM Financial Q&A (RAG)</b> – LangChain + Vector DB</li>
-  <li><b>MLOps Deployment Pipeline</b> – CI/CD + MLflow</li>
-  <li><b>Urban Litter Detection</b> – Computer Vision</li>
-</ul>
+    <section id="projects">
+      <h2>Featured Projects</h2>
 
-<h2>Links</h2>
-<ul>
-  <li><a href="https://github.com/nskkkkk">GitHub</a></li>
-  <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
-</ul>
+      <div class="grid">
+        <div class="card">
+          <h3>NLP Note Quality Metric (NQM)</h3>
+          <p>
+            End-to-end NLP system to score meeting notes (1–10) using sentiment/readability + embeddings,
+            with explainable models (SHAP) and experiment tracking.
+          </p>
+          <a href="https://github.com/nskkkkk/nlp-note-quality-metric" target="_blank" rel="noreferrer">View Repo →</a>
+          <div class="meta">
+            <span class="chip">NLP</span><span class="chip">XGBoost</span><span class="chip">SHAP</span><span class="chip">MLflow</span>
+          </div>
+        </div>
 
+        <div class="card">
+          <h3>End-to-End ML Risk Prediction Pipeline</h3>
+          <p>
+            Production-style pipeline for structured risk modeling: feature engineering, training,
+            evaluation, tracking, and a deployable inference path.
+          </p>
+          <a href="https://github.com/nskkkkk/End-to-End-ML-Risk-Prediction-Pipeline" target="_blank" rel="noreferrer">View Repo →</a>
+          <div class="meta">
+            <span class="chip">Tabular ML</span><span class="chip">XGBoost</span><span class="chip">Docker</span><span class="chip">MLflow</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>LLM Financial Document Q&A (RAG)</h3>
+          <p>
+            Retrieval-Augmented Generation over documents using embeddings + vector search, with source-grounded answers.
+          </p>
+          <a href="https://github.com/nskkkkk/llm-financial-document-rag" target="_blank" rel="noreferrer">View Repo →</a>
+          <div class="meta">
+            <span class="chip">LLM</span><span class="chip">LangChain</span><span class="chip">RAG</span><span class="chip">FAISS/Pinecone</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>MLOps Deployment Pipeline</h3>
+          <p>
+            MLOps workflow for training → versioning → CI/CD deploy → API inference, with reproducible runs and clean repo structure.
+          </p>
+          <a href="https://github.com/nskkkkk/mlops-model-deployment-pipeline" target="_blank" rel="noreferrer">View Repo →</a>
+          <div class="meta">
+            <span class="chip">FastAPI</span><span class="chip">Docker</span><span class="chip">GitHub Actions</span><span class="chip">MLflow</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Urban Litter Detection (Computer Vision)</h3>
+          <p>
+            Computer vision system trained on street-level imagery to detect litter; includes dataset notes, training, and inference examples.
+          </p>
+          <a href="https://github.com/nskkkkk/urban-litter-detection-cv" target="_blank" rel="noreferrer">View Repo →</a>
+          <div class="meta">
+            <span class="chip">Computer Vision</span><span class="chip">YOLO</span><span class="chip">COCO</span><span class="chip">OpenCV</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Analytics Engineering: ETL + Dashboards</h3>
+          <p>
+            Example analytics engineering repo: dbt-style transformations, quality checks, and BI-ready outputs for stakeholder reporting.
+          </p>
+          <a href="https://github.com/nskkkkk/analytics-engineering-etl" target="_blank" rel="noreferrer">View Repo →</a>
+          <div class="meta">
+            <span class="chip">SQL</span><span class="chip">dbt</span><span class="chip">Airflow</span><span class="chip">Data Quality</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="subtitle" style="margin-top: 12px;">
+        Tip: if a repo link 404s, create it later—your website can still be live today.
+      </p>
+    </section>
+
+    <section id="skills" class="two-col">
+      <div class="box">
+        <h2>Skills</h2>
+        <ul>
+          <li><b>ML/DS:</b> Scikit-Learn, XGBoost, Transformers, PyTorch/TensorFlow</li>
+          <li><b>NLP/LLMs:</b> SpaCy, embeddings, RAG, prompt engineering</li>
+          <li><b>MLOps:</b> MLflow, Docker, CI/CD (GitHub Actions), model versioning</li>
+          <li><b>Data:</b> SQL, PySpark, Snowflake/BigQuery, Airflow</li>
+          <li><b>Viz:</b> Tableau / Power BI (dashboards & stakeholder reporting)</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h2>Currently</h2>
+        <ul>
+          <li>Building an MLE-focused portfolio with end-to-end projects</li>
+          <li>Improving README quality + reproducibility</li>
+          <li>Adding deployment + monitoring components</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="box">
+      <h2>Contact</h2>
+      <ul>
+        <li>GitHub: <a href="https://github.com/nskkkkk" target="_blank" rel="noreferrer">github.com/nskkkkk</a></li>
+        <li>LinkedIn: <a href="https://www.linkedinnagasai12.com/" target="_blank" rel="noreferrer">Update with your LinkedIn URL</a></li>
+        <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+      </ul>
+      <p class="subtitle">Replace LinkedIn + email with your real ones.</p>
+    </section>
+
+    <div class="footer">
+      © <span id="year"></span> Naga Sai Krishna Kesani · Built with GitHub Pages
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
